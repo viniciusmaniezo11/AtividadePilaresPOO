@@ -7,10 +7,15 @@ namespace AtividadeHerancaPolimorfismo
 {
     public class EntregaEconomica : Entrega
     {
-        public override void CalcularFrete(decimal frete, int tarifa)
+        public decimal Tarifa { get; set; }
+        protected override decimal CalcularFrete()
         {
-            Frete = frete - tarifa;
-            Console.WriteLine($"Tipo de entrega: Economica - Valor do frete {Frete:C}");
+            return Frete - Tarifa;
+        }
+
+        public override void ExibirFrete()
+        {
+            Console.WriteLine($"O valor do frete é de {CalcularFrete():C}");
         }
     }
 }

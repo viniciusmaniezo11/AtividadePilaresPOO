@@ -9,8 +9,10 @@ namespace AtividadeHerancaPolimorfismo
     {
         public int Distancia { get; set; }
         
-        protected decimal Frete { get; set; }
+        public decimal Frete { get; set; }
 
-        public abstract void CalcularFrete(decimal frete, int taxaPorcentagem);
+        protected abstract decimal CalcularFrete();
+
+        public abstract void ExibirFrete();
     }
 }

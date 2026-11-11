@@ -48,10 +48,9 @@
 
 //* Exercicio 5 *//
 
-Entrega e1 = new EntregaExpressa();
+EntregaEconomica e1 = new EntregaEconomica();
 
-e1.CalcularFrete(500m, 10);
+e1.Frete = 500m;
+e1.Tarifa = 50m;
 
-Entrega e2 = new EntregaEconomica();
-
-e2.CalcularFrete(500, 50);
+e1.ExibirFrete();
