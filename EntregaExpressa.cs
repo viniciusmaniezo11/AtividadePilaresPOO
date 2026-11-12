@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+namespace AtividadeHerancaPolimorfismo
+{
+    public class EntregaExpressa : Entrega
+    {
+        public EntregaExpressa(decimal distancia) : base(distancia)
+        {
+        }
 
-// namespace AtividadeHerancaPolimorfismo
-// {
-//     public class EntregaExpressa : Entrega
-//     {
-//         public override void CalcularFrete(decimal frete, int taxaPorcentagem)
-//         {
-//             Frete = (frete / 100 * taxaPorcentagem) + frete;
-//             Console.WriteLine($"Tipo de entrega: Expresso - Valor do frete: {Frete:C}");
-//         }
-//     }
-// }
+        public decimal TaxaAdicional { get; set; } = 15m;
+        public override decimal CalcularFrete()
+        {
+            return (Distancia * 2) + (Distancia / 100 * TaxaAdicional);
+        }
+    }
+}

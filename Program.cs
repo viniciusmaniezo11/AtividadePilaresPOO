@@ -48,9 +48,17 @@
 
 //* Exercicio 5 *//
 
-EntregaEconomica e1 = new EntregaEconomica();
+// List<Entrega> entregas = new List<Entrega>
+// {
+//     new EntregaExpressa(25),
+//     new EntregaEconomica(25),
+//     new RetiradaLocal(25)
+// };
 
-e1.Frete = 500m;
-e1.Tarifa = 50m;
+// foreach (Entrega entrega in entregas)
+// {
+//     Console.WriteLine($"Modalidade: {entrega.GetType().Name} | Distância: {entrega.Distancia} km | Frete: {entrega.CalcularFrete():C}");
+// }
 
-e1.ExibirFrete();
+//* Exercicio 6 *//
+
